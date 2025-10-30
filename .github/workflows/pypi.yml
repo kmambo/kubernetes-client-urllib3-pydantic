@@ -3,11 +3,11 @@ name: Python - Test and build
 on:
   push:
     paths-ignore:
-      - '.github/workflows/python.yml'
+      - '.github/workflows/pypi.yml'
 
   pull_request:
     paths-ignore:
-      - '.github/workflows/python.yml'
+      - '.github/workflows/pypi.yml'
 
   workflow_dispatch:
     inputs:
@@ -24,7 +24,6 @@ on:
           - pypi
           - test.pypi
         default: Skip
-
 
 jobs:
   build:
