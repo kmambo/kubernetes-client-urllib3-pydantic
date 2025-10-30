@@ -61,11 +61,11 @@ jobs:
           path: ./.venv
           key: venv-${{ hashFiles('poetry.lock') }}
       - name: Install the project dependencies
-        run: poetry install --no-root
+        run: poetry install
       - name: Test with pytest (with coverage)
         run: |
           poetry run pytest \
-            --cov=kubernetes_asyncio \
+            --cov=src/kubernetes \
             --cov-report=xml:coverage-${{ matrix.python-version }}.xml \
             --cov-report html:htmlcov-${{ matrix.python-version }}
       - name: Upload pytest test results
@@ -91,7 +91,7 @@ jobs:
     needs: build
     environment:
       name: ${{ inputs.publish }}
-      url: https://pypi.org/p/kubernetes_pydantic_asyncio
+      # url: https://pypi.org/p/kubernetes-client-urllib3-pydantic
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -105,7 +105,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'pypi' }}
         with:
-          verbose: false
+          verbose: true
           print-hash: true
           packages-dir: dist/
           repository-url: https://upload.pypi.org/legacy/
