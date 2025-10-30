@@ -91,7 +91,7 @@ jobs:
     needs: build
     environment:
       name: ${{ inputs.publish }}
-      url: https://pypi.org/p/kubernetes-client-urllib3-pydantic
+      # url: https://pypi.org/p/kubernetes-client-urllib3-pydantic
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -105,7 +105,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish == 'pypi' }}
         with:
-          verbose: false
+          verbose: true
           print-hash: true
           packages-dir: dist/
           repository-url: https://upload.pypi.org/legacy/
