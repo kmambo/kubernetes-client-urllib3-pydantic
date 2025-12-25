@@ -1,6 +1,6 @@
 [project]
 name = "kubernetes_client_urllib3_pydantic"
-version = "32.0.0"
+version = "3.6"
 description = "Synchronous Kubernetes client with Pydantic support"
 requires-python = ">=3.13,<4.0"
 authors = [
