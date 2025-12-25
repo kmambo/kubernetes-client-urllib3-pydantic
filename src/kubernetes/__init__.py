@@ -14,7 +14,7 @@ Do not edit the class manually.
 """  # noqa: E501
 
 
-__version__ = "32.0.0"
+__version__ = "3.6"
 
 # Define package exports
 __all__ = [
@@ -32,7 +32,6 @@ __all__ = [
     "AppsV1Api",
     "AuthenticationApi",
     "AuthenticationV1Api",
-    "AuthenticationV1beta1Api",
     "AuthorizationApi",
     "AuthorizationV1Api",
     "AutoscalingApi",
@@ -43,9 +42,11 @@ __all__ = [
     "CertificatesApi",
     "CertificatesV1Api",
     "CertificatesV1alpha1Api",
+    "CertificatesV1beta1Api",
     "CoordinationApi",
     "CoordinationV1Api",
     "CoordinationV1alpha2Api",
+    "CoordinationV1beta1Api",
     "CoreApi",
     "CoreV1Api",
     "DiscoveryApi",
@@ -70,6 +71,7 @@ __all__ = [
     "ResourceApi",
     "ResourceV1alpha3Api",
     "ResourceV1beta1Api",
+    "ResourceV1beta2Api",
     "SchedulingApi",
     "SchedulingV1Api",
     "StorageApi",
@@ -238,6 +240,7 @@ __all__ = [
     "V1FlowSchemaList",
     "V1FlowSchemaSpec",
     "V1FlowSchemaStatus",
+    "V1ForNode",
     "V1ForZone",
     "V1GCEPersistentDiskVolumeSource",
     "V1GRPCAction",
@@ -257,6 +260,9 @@ __all__ = [
     "V1HostAlias",
     "V1HostIP",
     "V1HostPathVolumeSource",
+    "V1IPAddress",
+    "V1IPAddressList",
+    "V1IPAddressSpec",
     "V1IPBlock",
     "V1ISCSIPersistentVolumeSource",
     "V1ISCSIVolumeSource",
@@ -342,6 +348,7 @@ __all__ = [
     "V1NodeSelectorTerm",
     "V1NodeSpec",
     "V1NodeStatus",
+    "V1NodeSwapStatus",
     "V1NodeSystemInfo",
     "V1NonResourceAttributes",
     "V1NonResourcePolicyRule",
@@ -353,6 +360,7 @@ __all__ = [
     "V1OwnerReference",
     "V1ParamKind",
     "V1ParamRef",
+    "V1ParentReference",
     "V1PersistentVolume",
     "V1PersistentVolumeClaim",
     "V1PersistentVolumeClaimCondition",
@@ -480,6 +488,10 @@ __all__ = [
     "V1ServiceAccountSubject",
     "V1ServiceAccountTokenProjection",
     "V1ServiceBackendPort",
+    "V1ServiceCIDR",
+    "V1ServiceCIDRList",
+    "V1ServiceCIDRSpec",
+    "V1ServiceCIDRStatus",
     "V1ServiceList",
     "V1ServicePort",
     "V1ServiceReference",
@@ -603,6 +615,8 @@ __all__ = [
     "V1alpha3AllocationResult",
     "V1alpha3BasicDevice",
     "V1alpha3CELDeviceSelector",
+    "V1alpha3Counter",
+    "V1alpha3CounterSet",
     "V1alpha3Device",
     "V1alpha3DeviceAllocationConfiguration",
     "V1alpha3DeviceAllocationResult",
@@ -614,9 +628,17 @@ __all__ = [
     "V1alpha3DeviceClassList",
     "V1alpha3DeviceClassSpec",
     "V1alpha3DeviceConstraint",
+    "V1alpha3DeviceCounterConsumption",
     "V1alpha3DeviceRequest",
     "V1alpha3DeviceRequestAllocationResult",
     "V1alpha3DeviceSelector",
+    "V1alpha3DeviceSubRequest",
+    "V1alpha3DeviceTaint",
+    "V1alpha3DeviceTaintRule",
+    "V1alpha3DeviceTaintRuleList",
+    "V1alpha3DeviceTaintRuleSpec",
+    "V1alpha3DeviceTaintSelector",
+    "V1alpha3DeviceToleration",
     "V1alpha3NetworkDeviceData",
     "V1alpha3OpaqueDeviceConfiguration",
     "V1alpha3ResourceClaim",
@@ -636,6 +658,12 @@ __all__ = [
     "V1beta1AuditAnnotation",
     "V1beta1BasicDevice",
     "V1beta1CELDeviceSelector",
+    "V1beta1ClusterTrustBundle",
+    "V1beta1ClusterTrustBundleList",
+    "V1beta1ClusterTrustBundleSpec",
+    "V1beta1Counter",
+    "V1beta1CounterSet",
+    "V1beta1CounterValue",
     "V1beta1Device",
     "V1beta1DeviceAllocationConfiguration",
     "V1beta1DeviceAllocationResult",
@@ -649,13 +677,20 @@ __all__ = [
     "V1beta1DeviceClassList",
     "V1beta1DeviceClassSpec",
     "V1beta1DeviceConstraint",
+    "V1beta1DeviceCounterConsumption",
     "V1beta1DeviceRequest",
     "V1beta1DeviceRequestAllocationResult",
     "V1beta1DeviceSelector",
+    "V1beta1DeviceSubRequest",
+    "V1beta1DeviceTaint",
+    "V1beta1DeviceToleration",
     "V1beta1ExpressionWarning",
     "V1beta1IPAddress",
     "V1beta1IPAddressList",
     "V1beta1IPAddressSpec",
+    "V1beta1LeaseCandidate",
+    "V1beta1LeaseCandidateList",
+    "V1beta1LeaseCandidateSpec",
     "V1beta1MatchCondition",
     "V1beta1MatchResources",
     "V1beta1NamedRuleWithOperations",
@@ -676,8 +711,6 @@ __all__ = [
     "V1beta1ResourceSlice",
     "V1beta1ResourceSliceList",
     "V1beta1ResourceSliceSpec",
-    "V1beta1SelfSubjectReview",
-    "V1beta1SelfSubjectReviewStatus",
     "V1beta1ServiceCIDR",
     "V1beta1ServiceCIDRList",
     "V1beta1ServiceCIDRSpec",
@@ -694,6 +727,45 @@ __all__ = [
     "V1beta1Variable",
     "V1beta1VolumeAttributesClass",
     "V1beta1VolumeAttributesClassList",
+    "V1beta2AllocatedDeviceStatus",
+    "V1beta2AllocationResult",
+    "V1beta2CELDeviceSelector",
+    "V1beta2Counter",
+    "V1beta2CounterSet",
+    "V1beta2Device",
+    "V1beta2DeviceAllocationConfiguration",
+    "V1beta2DeviceAllocationResult",
+    "V1beta2DeviceAttribute",
+    "V1beta2DeviceCapacity",
+    "V1beta2DeviceClaim",
+    "V1beta2DeviceClaimConfiguration",
+    "V1beta2DeviceClass",
+    "V1beta2DeviceClassConfiguration",
+    "V1beta2DeviceClassList",
+    "V1beta2DeviceClassSpec",
+    "V1beta2DeviceConstraint",
+    "V1beta2DeviceCounterConsumption",
+    "V1beta2DeviceRequest",
+    "V1beta2DeviceRequestAllocationResult",
+    "V1beta2DeviceSelector",
+    "V1beta2DeviceSubRequest",
+    "V1beta2DeviceTaint",
+    "V1beta2DeviceToleration",
+    "V1beta2ExactDeviceRequest",
+    "V1beta2NetworkDeviceData",
+    "V1beta2OpaqueDeviceConfiguration",
+    "V1beta2ResourceClaim",
+    "V1beta2ResourceClaimConsumerReference",
+    "V1beta2ResourceClaimList",
+    "V1beta2ResourceClaimSpec",
+    "V1beta2ResourceClaimStatus",
+    "V1beta2ResourceClaimTemplate",
+    "V1beta2ResourceClaimTemplateList",
+    "V1beta2ResourceClaimTemplateSpec",
+    "V1beta2ResourcePool",
+    "V1beta2ResourceSlice",
+    "V1beta2ResourceSliceList",
+    "V1beta2ResourceSliceSpec",
     "V2ContainerResourceMetricSource",
     "V2ContainerResourceMetricStatus",
     "V2CrossVersionObjectReference",
@@ -701,6 +773,7 @@ __all__ = [
     "V2ExternalMetricStatus",
     "V2HPAScalingPolicy",
     "V2HPAScalingRules",
+    "V2HPAScalingRulesTolerance",
     "V2HorizontalPodAutoscaler",
     "V2HorizontalPodAutoscalerBehavior",
     "V2HorizontalPodAutoscalerCondition",
@@ -750,9 +823,6 @@ from kubernetes.api.authentication_api import AuthenticationApi as Authenticatio
 from kubernetes.api.authentication_v1_api import (
     AuthenticationV1Api as AuthenticationV1Api,
 )
-from kubernetes.api.authentication_v1beta1_api import (
-    AuthenticationV1beta1Api as AuthenticationV1beta1Api,
-)
 from kubernetes.api.authorization_api import AuthorizationApi as AuthorizationApi
 from kubernetes.api.authorization_v1_api import AuthorizationV1Api as AuthorizationV1Api
 from kubernetes.api.autoscaling_api import AutoscalingApi as AutoscalingApi
@@ -765,10 +835,16 @@ from kubernetes.api.certificates_v1_api import CertificatesV1Api as Certificates
 from kubernetes.api.certificates_v1alpha1_api import (
     CertificatesV1alpha1Api as CertificatesV1alpha1Api,
 )
+from kubernetes.api.certificates_v1beta1_api import (
+    CertificatesV1beta1Api as CertificatesV1beta1Api,
+)
 from kubernetes.api.coordination_api import CoordinationApi as CoordinationApi
 from kubernetes.api.coordination_v1_api import CoordinationV1Api as CoordinationV1Api
 from kubernetes.api.coordination_v1alpha2_api import (
     CoordinationV1alpha2Api as CoordinationV1alpha2Api,
+)
+from kubernetes.api.coordination_v1beta1_api import (
+    CoordinationV1beta1Api as CoordinationV1beta1Api,
 )
 from kubernetes.api.core_api import CoreApi as CoreApi
 from kubernetes.api.core_v1_api import CoreV1Api as CoreV1Api
@@ -810,6 +886,7 @@ from kubernetes.api.resource_v1alpha3_api import (
     ResourceV1alpha3Api as ResourceV1alpha3Api,
 )
 from kubernetes.api.resource_v1beta1_api import ResourceV1beta1Api as ResourceV1beta1Api
+from kubernetes.api.resource_v1beta2_api import ResourceV1beta2Api as ResourceV1beta2Api
 from kubernetes.api.scheduling_api import SchedulingApi as SchedulingApi
 from kubernetes.api.scheduling_v1_api import SchedulingV1Api as SchedulingV1Api
 from kubernetes.api.storage_api import StorageApi as StorageApi
@@ -1151,6 +1228,7 @@ from kubernetes.models.v1_flow_schema_spec import V1FlowSchemaSpec as V1FlowSche
 from kubernetes.models.v1_flow_schema_status import (
     V1FlowSchemaStatus as V1FlowSchemaStatus,
 )
+from kubernetes.models.v1_for_node import V1ForNode as V1ForNode
 from kubernetes.models.v1_for_zone import V1ForZone as V1ForZone
 from kubernetes.models.v1_gce_persistent_disk_volume_source import (
     V1GCEPersistentDiskVolumeSource as V1GCEPersistentDiskVolumeSource,
@@ -1226,6 +1304,9 @@ from kubernetes.models.v1_ingress_service_backend import (
 from kubernetes.models.v1_ingress_spec import V1IngressSpec as V1IngressSpec
 from kubernetes.models.v1_ingress_status import V1IngressStatus as V1IngressStatus
 from kubernetes.models.v1_ingress_tls import V1IngressTLS as V1IngressTLS
+from kubernetes.models.v1_ip_address import V1IPAddress as V1IPAddress
+from kubernetes.models.v1_ip_address_list import V1IPAddressList as V1IPAddressList
+from kubernetes.models.v1_ip_address_spec import V1IPAddressSpec as V1IPAddressSpec
 from kubernetes.models.v1_ip_block import V1IPBlock as V1IPBlock
 from kubernetes.models.v1_iscsi_persistent_volume_source import (
     V1ISCSIPersistentVolumeSource as V1ISCSIPersistentVolumeSource,
@@ -1363,6 +1444,7 @@ from kubernetes.models.v1_node_selector_term import (
 )
 from kubernetes.models.v1_node_spec import V1NodeSpec as V1NodeSpec
 from kubernetes.models.v1_node_status import V1NodeStatus as V1NodeStatus
+from kubernetes.models.v1_node_swap_status import V1NodeSwapStatus as V1NodeSwapStatus
 from kubernetes.models.v1_node_system_info import V1NodeSystemInfo as V1NodeSystemInfo
 from kubernetes.models.v1_non_resource_attributes import (
     V1NonResourceAttributes as V1NonResourceAttributes,
@@ -1382,6 +1464,7 @@ from kubernetes.models.v1_overhead import V1Overhead as V1Overhead
 from kubernetes.models.v1_owner_reference import V1OwnerReference as V1OwnerReference
 from kubernetes.models.v1_param_kind import V1ParamKind as V1ParamKind
 from kubernetes.models.v1_param_ref import V1ParamRef as V1ParamRef
+from kubernetes.models.v1_parent_reference import V1ParentReference as V1ParentReference
 from kubernetes.models.v1_persistent_volume import (
     V1PersistentVolume as V1PersistentVolume,
 )
@@ -1678,6 +1761,16 @@ from kubernetes.models.v1_service_account_token_projection import (
 )
 from kubernetes.models.v1_service_backend_port import (
     V1ServiceBackendPort as V1ServiceBackendPort,
+)
+from kubernetes.models.v1_service_cidr import V1ServiceCIDR as V1ServiceCIDR
+from kubernetes.models.v1_service_cidr_list import (
+    V1ServiceCIDRList as V1ServiceCIDRList,
+)
+from kubernetes.models.v1_service_cidr_spec import (
+    V1ServiceCIDRSpec as V1ServiceCIDRSpec,
+)
+from kubernetes.models.v1_service_cidr_status import (
+    V1ServiceCIDRStatus as V1ServiceCIDRStatus,
 )
 from kubernetes.models.v1_service_list import V1ServiceList as V1ServiceList
 from kubernetes.models.v1_service_port import V1ServicePort as V1ServicePort
@@ -1980,6 +2073,10 @@ from kubernetes.models.v1alpha3_basic_device import (
 from kubernetes.models.v1alpha3_cel_device_selector import (
     V1alpha3CELDeviceSelector as V1alpha3CELDeviceSelector,
 )
+from kubernetes.models.v1alpha3_counter import V1alpha3Counter as V1alpha3Counter
+from kubernetes.models.v1alpha3_counter_set import (
+    V1alpha3CounterSet as V1alpha3CounterSet,
+)
 from kubernetes.models.v1alpha3_device import V1alpha3Device as V1alpha3Device
 from kubernetes.models.v1alpha3_device_allocation_configuration import (
     V1alpha3DeviceAllocationConfiguration as V1alpha3DeviceAllocationConfiguration,
@@ -2011,6 +2108,9 @@ from kubernetes.models.v1alpha3_device_class_spec import (
 from kubernetes.models.v1alpha3_device_constraint import (
     V1alpha3DeviceConstraint as V1alpha3DeviceConstraint,
 )
+from kubernetes.models.v1alpha3_device_counter_consumption import (
+    V1alpha3DeviceCounterConsumption as V1alpha3DeviceCounterConsumption,
+)
 from kubernetes.models.v1alpha3_device_request import (
     V1alpha3DeviceRequest as V1alpha3DeviceRequest,
 )
@@ -2019,6 +2119,27 @@ from kubernetes.models.v1alpha3_device_request_allocation_result import (
 )
 from kubernetes.models.v1alpha3_device_selector import (
     V1alpha3DeviceSelector as V1alpha3DeviceSelector,
+)
+from kubernetes.models.v1alpha3_device_sub_request import (
+    V1alpha3DeviceSubRequest as V1alpha3DeviceSubRequest,
+)
+from kubernetes.models.v1alpha3_device_taint import (
+    V1alpha3DeviceTaint as V1alpha3DeviceTaint,
+)
+from kubernetes.models.v1alpha3_device_taint_rule import (
+    V1alpha3DeviceTaintRule as V1alpha3DeviceTaintRule,
+)
+from kubernetes.models.v1alpha3_device_taint_rule_list import (
+    V1alpha3DeviceTaintRuleList as V1alpha3DeviceTaintRuleList,
+)
+from kubernetes.models.v1alpha3_device_taint_rule_spec import (
+    V1alpha3DeviceTaintRuleSpec as V1alpha3DeviceTaintRuleSpec,
+)
+from kubernetes.models.v1alpha3_device_taint_selector import (
+    V1alpha3DeviceTaintSelector as V1alpha3DeviceTaintSelector,
+)
+from kubernetes.models.v1alpha3_device_toleration import (
+    V1alpha3DeviceToleration as V1alpha3DeviceToleration,
 )
 from kubernetes.models.v1alpha3_network_device_data import (
     V1alpha3NetworkDeviceData as V1alpha3NetworkDeviceData,
@@ -2077,6 +2198,20 @@ from kubernetes.models.v1beta1_basic_device import (
 from kubernetes.models.v1beta1_cel_device_selector import (
     V1beta1CELDeviceSelector as V1beta1CELDeviceSelector,
 )
+from kubernetes.models.v1beta1_cluster_trust_bundle import (
+    V1beta1ClusterTrustBundle as V1beta1ClusterTrustBundle,
+)
+from kubernetes.models.v1beta1_cluster_trust_bundle_list import (
+    V1beta1ClusterTrustBundleList as V1beta1ClusterTrustBundleList,
+)
+from kubernetes.models.v1beta1_cluster_trust_bundle_spec import (
+    V1beta1ClusterTrustBundleSpec as V1beta1ClusterTrustBundleSpec,
+)
+from kubernetes.models.v1beta1_counter import V1beta1Counter as V1beta1Counter
+from kubernetes.models.v1beta1_counter_set import V1beta1CounterSet as V1beta1CounterSet
+from kubernetes.models.v1beta1_counter_value import (
+    V1beta1CounterValue as V1beta1CounterValue,
+)
 from kubernetes.models.v1beta1_device import V1beta1Device as V1beta1Device
 from kubernetes.models.v1beta1_device_allocation_configuration import (
     V1beta1DeviceAllocationConfiguration as V1beta1DeviceAllocationConfiguration,
@@ -2114,6 +2249,9 @@ from kubernetes.models.v1beta1_device_class_spec import (
 from kubernetes.models.v1beta1_device_constraint import (
     V1beta1DeviceConstraint as V1beta1DeviceConstraint,
 )
+from kubernetes.models.v1beta1_device_counter_consumption import (
+    V1beta1DeviceCounterConsumption as V1beta1DeviceCounterConsumption,
+)
 from kubernetes.models.v1beta1_device_request import (
     V1beta1DeviceRequest as V1beta1DeviceRequest,
 )
@@ -2122,6 +2260,15 @@ from kubernetes.models.v1beta1_device_request_allocation_result import (
 )
 from kubernetes.models.v1beta1_device_selector import (
     V1beta1DeviceSelector as V1beta1DeviceSelector,
+)
+from kubernetes.models.v1beta1_device_sub_request import (
+    V1beta1DeviceSubRequest as V1beta1DeviceSubRequest,
+)
+from kubernetes.models.v1beta1_device_taint import (
+    V1beta1DeviceTaint as V1beta1DeviceTaint,
+)
+from kubernetes.models.v1beta1_device_toleration import (
+    V1beta1DeviceToleration as V1beta1DeviceToleration,
 )
 from kubernetes.models.v1beta1_expression_warning import (
     V1beta1ExpressionWarning as V1beta1ExpressionWarning,
@@ -2132,6 +2279,15 @@ from kubernetes.models.v1beta1_ip_address_list import (
 )
 from kubernetes.models.v1beta1_ip_address_spec import (
     V1beta1IPAddressSpec as V1beta1IPAddressSpec,
+)
+from kubernetes.models.v1beta1_lease_candidate import (
+    V1beta1LeaseCandidate as V1beta1LeaseCandidate,
+)
+from kubernetes.models.v1beta1_lease_candidate_list import (
+    V1beta1LeaseCandidateList as V1beta1LeaseCandidateList,
+)
+from kubernetes.models.v1beta1_lease_candidate_spec import (
+    V1beta1LeaseCandidateSpec as V1beta1LeaseCandidateSpec,
 )
 from kubernetes.models.v1beta1_match_condition import (
     V1beta1MatchCondition as V1beta1MatchCondition,
@@ -2189,12 +2345,6 @@ from kubernetes.models.v1beta1_resource_slice_list import (
 from kubernetes.models.v1beta1_resource_slice_spec import (
     V1beta1ResourceSliceSpec as V1beta1ResourceSliceSpec,
 )
-from kubernetes.models.v1beta1_self_subject_review import (
-    V1beta1SelfSubjectReview as V1beta1SelfSubjectReview,
-)
-from kubernetes.models.v1beta1_self_subject_review_status import (
-    V1beta1SelfSubjectReviewStatus as V1beta1SelfSubjectReviewStatus,
-)
 from kubernetes.models.v1beta1_service_cidr import (
     V1beta1ServiceCIDR as V1beta1ServiceCIDR,
 )
@@ -2239,6 +2389,117 @@ from kubernetes.models.v1beta1_volume_attributes_class import (
 from kubernetes.models.v1beta1_volume_attributes_class_list import (
     V1beta1VolumeAttributesClassList as V1beta1VolumeAttributesClassList,
 )
+from kubernetes.models.v1beta2_allocated_device_status import (
+    V1beta2AllocatedDeviceStatus as V1beta2AllocatedDeviceStatus,
+)
+from kubernetes.models.v1beta2_allocation_result import (
+    V1beta2AllocationResult as V1beta2AllocationResult,
+)
+from kubernetes.models.v1beta2_cel_device_selector import (
+    V1beta2CELDeviceSelector as V1beta2CELDeviceSelector,
+)
+from kubernetes.models.v1beta2_counter import V1beta2Counter as V1beta2Counter
+from kubernetes.models.v1beta2_counter_set import V1beta2CounterSet as V1beta2CounterSet
+from kubernetes.models.v1beta2_device import V1beta2Device as V1beta2Device
+from kubernetes.models.v1beta2_device_allocation_configuration import (
+    V1beta2DeviceAllocationConfiguration as V1beta2DeviceAllocationConfiguration,
+)
+from kubernetes.models.v1beta2_device_allocation_result import (
+    V1beta2DeviceAllocationResult as V1beta2DeviceAllocationResult,
+)
+from kubernetes.models.v1beta2_device_attribute import (
+    V1beta2DeviceAttribute as V1beta2DeviceAttribute,
+)
+from kubernetes.models.v1beta2_device_capacity import (
+    V1beta2DeviceCapacity as V1beta2DeviceCapacity,
+)
+from kubernetes.models.v1beta2_device_claim import (
+    V1beta2DeviceClaim as V1beta2DeviceClaim,
+)
+from kubernetes.models.v1beta2_device_claim_configuration import (
+    V1beta2DeviceClaimConfiguration as V1beta2DeviceClaimConfiguration,
+)
+from kubernetes.models.v1beta2_device_class import (
+    V1beta2DeviceClass as V1beta2DeviceClass,
+)
+from kubernetes.models.v1beta2_device_class_configuration import (
+    V1beta2DeviceClassConfiguration as V1beta2DeviceClassConfiguration,
+)
+from kubernetes.models.v1beta2_device_class_list import (
+    V1beta2DeviceClassList as V1beta2DeviceClassList,
+)
+from kubernetes.models.v1beta2_device_class_spec import (
+    V1beta2DeviceClassSpec as V1beta2DeviceClassSpec,
+)
+from kubernetes.models.v1beta2_device_constraint import (
+    V1beta2DeviceConstraint as V1beta2DeviceConstraint,
+)
+from kubernetes.models.v1beta2_device_counter_consumption import (
+    V1beta2DeviceCounterConsumption as V1beta2DeviceCounterConsumption,
+)
+from kubernetes.models.v1beta2_device_request import (
+    V1beta2DeviceRequest as V1beta2DeviceRequest,
+)
+from kubernetes.models.v1beta2_device_request_allocation_result import (
+    V1beta2DeviceRequestAllocationResult as V1beta2DeviceRequestAllocationResult,
+)
+from kubernetes.models.v1beta2_device_selector import (
+    V1beta2DeviceSelector as V1beta2DeviceSelector,
+)
+from kubernetes.models.v1beta2_device_sub_request import (
+    V1beta2DeviceSubRequest as V1beta2DeviceSubRequest,
+)
+from kubernetes.models.v1beta2_device_taint import (
+    V1beta2DeviceTaint as V1beta2DeviceTaint,
+)
+from kubernetes.models.v1beta2_device_toleration import (
+    V1beta2DeviceToleration as V1beta2DeviceToleration,
+)
+from kubernetes.models.v1beta2_exact_device_request import (
+    V1beta2ExactDeviceRequest as V1beta2ExactDeviceRequest,
+)
+from kubernetes.models.v1beta2_network_device_data import (
+    V1beta2NetworkDeviceData as V1beta2NetworkDeviceData,
+)
+from kubernetes.models.v1beta2_opaque_device_configuration import (
+    V1beta2OpaqueDeviceConfiguration as V1beta2OpaqueDeviceConfiguration,
+)
+from kubernetes.models.v1beta2_resource_claim import (
+    V1beta2ResourceClaim as V1beta2ResourceClaim,
+)
+from kubernetes.models.v1beta2_resource_claim_consumer_reference import (
+    V1beta2ResourceClaimConsumerReference as V1beta2ResourceClaimConsumerReference,
+)
+from kubernetes.models.v1beta2_resource_claim_list import (
+    V1beta2ResourceClaimList as V1beta2ResourceClaimList,
+)
+from kubernetes.models.v1beta2_resource_claim_spec import (
+    V1beta2ResourceClaimSpec as V1beta2ResourceClaimSpec,
+)
+from kubernetes.models.v1beta2_resource_claim_status import (
+    V1beta2ResourceClaimStatus as V1beta2ResourceClaimStatus,
+)
+from kubernetes.models.v1beta2_resource_claim_template import (
+    V1beta2ResourceClaimTemplate as V1beta2ResourceClaimTemplate,
+)
+from kubernetes.models.v1beta2_resource_claim_template_list import (
+    V1beta2ResourceClaimTemplateList as V1beta2ResourceClaimTemplateList,
+)
+from kubernetes.models.v1beta2_resource_claim_template_spec import (
+    V1beta2ResourceClaimTemplateSpec as V1beta2ResourceClaimTemplateSpec,
+)
+from kubernetes.models.v1beta2_resource_pool import (
+    V1beta2ResourcePool as V1beta2ResourcePool,
+)
+from kubernetes.models.v1beta2_resource_slice import (
+    V1beta2ResourceSlice as V1beta2ResourceSlice,
+)
+from kubernetes.models.v1beta2_resource_slice_list import (
+    V1beta2ResourceSliceList as V1beta2ResourceSliceList,
+)
+from kubernetes.models.v1beta2_resource_slice_spec import (
+    V1beta2ResourceSliceSpec as V1beta2ResourceSliceSpec,
+)
 from kubernetes.models.v2_container_resource_metric_source import (
     V2ContainerResourceMetricSource as V2ContainerResourceMetricSource,
 )
@@ -2277,6 +2538,9 @@ from kubernetes.models.v2_hpa_scaling_policy import (
 )
 from kubernetes.models.v2_hpa_scaling_rules import (
     V2HPAScalingRules as V2HPAScalingRules,
+)
+from kubernetes.models.v2_hpa_scaling_rules_tolerance import (
+    V2HPAScalingRulesTolerance as V2HPAScalingRulesTolerance,
 )
 from kubernetes.models.v2_metric_identifier import (
     V2MetricIdentifier as V2MetricIdentifier,
